@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(140, 223, 244);
+    overflow: hidden;
+}
+.gameContainer{
+  background: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width:100%;
+  height:100vh;
+}
+.player{
+    background-image: url(penguin-jump-cartoon-animals-jumping-illustration-free-vector-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:170px;
+    height:140px;
+    position:absolute;
+    bottom:0;
+    left:65px;
+}
+.obstacle{
+    background-image: url(seal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:130px;
+    width:210px;
+    position:absolute;
+    bottom:0;
+    left:50vw;
+
+}
+.animatePlayer{
+     animation:player 2s linear;
+
+}
+.gameOver{
+    position: relative;
+    top:89px;
+    font-size: 77px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+    visibility: hidden;
+    color:rgb(57, 33, 13);
+
+}
+.obstacleAni{
+    animation: obstacleani 5s linear infinite;
+}
+
+#scorecount{
+   position:absolute;
+   right:23px;
+   top:23px;
+   color:rgb(75, 43, 19);
+   border: 2px solid rgb(67, 38, 12);
+   font-family: sans-serif;
+   width:112px;
+   padding: 10px;
+   font-weight: bold;
+}
+@keyframes player{
+    0%{
+       bottom:0;
+    }
+    50%{
+        bottom:500px;
+    }
+    100%{
+        bottom:0;
+    }
+}
+
+@keyframes obstacleani{
+    0%{
+        left:100vw;
+    }
+    100%{
+        left:-10vw;
+    }
+}
+
